@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#fff" android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.DangNhapActivity">
+        <ImageView
+            android:src="@drawable/chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:text="0943723053"
+                android:maxLength="10"
+                android:inputType="phone"
+                android:digits="1234567890"
+                android:textSize="20sp"
+                android:backgroundTint="#03A9F4"
+                android:layout_margin="20dp"
+                android:drawableStart="@drawable/ic_baseline_person_24"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/colorTextSecondary"
+                android:hint="Số điện thoại"
+                android:id="@+id/editextsdtdangnhap"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:passwordToggleEnabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:text="1"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:backgroundTint="#03A9F4"
+                android:layout_margin="20dp"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="10dp"
+                android:textColorHint="@color/colorTextSecondary"
+                android:hint="Mật khẩu"
+                android:id="@+id/editextmatkhaudangnhap"
+                android:textColor="@color/colorTextPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/textviewquenmatkhau"
+            android:textAlignment="center"
+            android:textColor="#03A9F4"
+            android:text="Bạn quên mật khẩu?"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:textColor="#fff"
+            android:background="@drawable/custom_button"
+            android:id="@+id/buttondangnhap"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_marginTop="20dp"
+            android:text="Đăng nhập"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="50dp"/>
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/progressbar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+        <TextView
+            android:id="@+id/textviewdangky"
+            android:textColor="#03A9F4"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:text="Bạn chưa có tài khoản? Đăng ký ngay!"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

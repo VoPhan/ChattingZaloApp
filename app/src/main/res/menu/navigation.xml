@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_tinnhan"
+        android:icon="@drawable/ic_baseline_message_24"
+        android:title="Tin nhắn" />
+
+    <item
+        android:id="@+id/navigation_danhba"
+        android:icon="@drawable/ic_baseline_contact_phone_24"
+        android:title="Danh bạ" />
+
+    <item
+        android:id="@+id/navigation_nhom"
+        android:icon="@drawable/ic_baseline_groups_24"
+        android:title="Nhóm" />
+
+    <item
+        android:id="@+id/navigation_hoso"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Hồ sơ" />
+</menu>

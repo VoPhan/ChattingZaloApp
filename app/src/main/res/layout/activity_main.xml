@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#fff"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:weightSum="10"
+        android:background="#03A9F4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_weight="8"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:backgroundTint="#03A9F4"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:drawablePadding="20dp"
+            android:textColorHint="@color/colorTextWhite"
+            android:hint="Tìm bạn bè"
+            android:id="@+id/editextnhaplaimatkhau"
+            android:textColor="@color/colorTextWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <ImageButton
+            android:background="@null"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:weightSum="10"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_weight="9"
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_weight="1"
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="?android:attr/windowBackground"
+            app:itemBackground="@color/colorTextWhite"
+            android:foreground="?attr/selectableItemBackground"
+            app:menu="@menu/navigation" />
+    </LinearLayout>
+</LinearLayout>
