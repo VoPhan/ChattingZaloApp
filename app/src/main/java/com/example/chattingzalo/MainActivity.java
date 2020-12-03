@@ -2,12 +2,11 @@ package com.example.chattingzalo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -18,34 +17,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        init();
+        navigation = findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, new TinNhanFragment()).commit();
     }
 
     private void init() {
-        navigation = findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-    }
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
+    }
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @SuppressLint("NonConstantResourceId")
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment;
+            Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.navigation_tinnhan:
-
-                    return true;
+                    fragment = new TinNhanFragment();
+                    break;
                 case R.id.navigation_danhba:
-
-                    return true;
+                    fragment = new DanhBaFragment();
+                    break;
                 case R.id.navigation_nhom:
-
-                    return true;
+                    fragment = new NhomFragment();
+                    break;
                 case R.id.navigation_hoso:
-
-                    return true;
+                    fragment = new HoSoFragment();
+                    break;
             }
-            return false;
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, fragment).commit();
+            return true;
         }
     };
 }
